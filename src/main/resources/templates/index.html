@@ -2,9 +2,460 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Future Tense</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flickity@2.2.2/dist/flickity.min.css" />
+    <style>
+    body {
+        background-color: rgba(225, 220, 210, 0.3);
+    }
+    .section-title {
+        font-family: Oswald;
+        color: black;
+        font-size: 36px;
+    }
+
+    /* Custom styles for the carousel */
+    .carousel-container {
+        padding: 20px;
+        background-color: rgba(225, 220, 210, 0.5);
+    }
+    .carousel {
+        height: 220px;
+    }
+
+    .carousel-cell {
+        position: relative;
+        width: 33.33%;
+        height: 220px; /* Set the height of each carousel cell */
+        margin-right: 10px; /* Set the spacing between carousel cells */
+        background-color: rgba(225, 220, 210, 0.00);
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .carousel-cell .thumbnail-wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.5);
+        text-align: center;
+        line-height: 150px;
+        font-size: 24px;
+    }
+    .carousel-cell .thumbnail-carousel-1 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background-position: left 20% bottom;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 2px 4px rgba(0, 1, 1, 0.4);
+        transform: translate(-50%, -50%);
+        transition: opacity 0.3s ease-in-out;
+    }
+    .carousel-cell .carousel-image-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.7);
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: opacity 0.3s ease-in-out;
+    }
+    .carousel-cell:hover .carousel-image-overlay {
+        opacity: 1;
+    }
+    .carousel-cell:hover .thumbnail-carousel {
+        opacity: 0.8;
+    }
+    .carousel-cell .carousel-image-overlay-text {
+            line-height: 15px;
+
+        color: white;
+        font-size: 14px;
+    }
+    .carousel-cell .thumbnail-carousel-2 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background-size: cover;
+        background-position: center bottom;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 2px 4px rgba(0, 1, 1, 0.4);
+    }
+    .carousel-cell .thumbnail-carousel-3 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background-size: cover;
+        background-position: center bottom 30%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 2px 4px rgba(0, 1, 1, 0.4);
+    }
+
+    .carousel-cell .thumbnail-carousel-4 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background-size: cover;
+        background-position: center top 30%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 2px 4px rgba(0, 1, 1, 0.4);
+    }
+
+    .carousel-cell .thumbnail-carousel-5 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background-size: cover;
+        background-position: center bottom 30%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 2px 4px rgba(0, 1, 1, 0.4);
+    }
+
+    /* Nav Bar */
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    ul li {
+        margin-right: 10px;
+    }
+    ul li a {
+        color: #fff;
+        text-decoration: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+     ul li a:hover {
+        background-color: rgba(225, 220, 210, 0.5);
+    }
+    .logo{
+        height: 40px;
+    }
+
+    /* Product List */
+    .product-list {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .product-item {
+        flex: 0 0 calc(33.33% - 20px);
+        background-color: rgba(225, 220, 210, 0.5);
+        padding: 20px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+    }
+    .product-item:hover {
+        background-color: white;
+    }
+    .product-item a:hover {
+        background-color: white;
+    }
+    .product-item:last-child {
+        margin-right: 0;
+    }
+    .product-item a {
+        display: block;
+        text-decoration: none;
+        color: #333;
+    }
+
+    .product-item .thumbnail-wrapper {
+        width: 100%;
+        height: 0;
+        padding-bottom: 100%; /* Maintain a square aspect ratio */
+        justify-content: space-between;
+        position: relative;
+        overflow: hidden;
+    }
+    .product-item .thumbnail-image-1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center top;
+        border-radius: 10px;
+        transform: translate(-50%, -50%);
+    }
+    .product-item .thumbnail-image-2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center top 20%;
+        border-radius: 10px;
+        transform: translate(-50%, -50%);
+    }
+    .product-item .thumbnail-image-3 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center bottom 30%;
+        border-radius: 10px;
+        transform: translate(-50%, -50%);
+    }
+    .product-item .thumbnail-image-4 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        transform: translate(-50%, -50%);
+    }
+    .product-item .thumbnail-image-5 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center bottom 55%;
+        border-radius: 10px;
+        transform: translate(-50%, -50%);
+    }
+    .product-item .thumbnail-image-6 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center top 60%;
+        border-radius: 10px;
+        transform: translate(-50%, -50%);
+    }
+    .product-item h2 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .product-item .price {
+        font-weight: bold;
+        font-size: 14px;
+    }
+    </style>
 </head>
+
 <body>
 
+<header>
+    <nav>
+        <div>
+            <div>
+                <ul>
+                    <li>
+                        <a href="/">
+                            <img class="logo" alt="photo" src="images/FTLogo.jpeg" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/">
+                            <img class="logo" src="images/FTB-Header-Name.jpeg" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/about.html">ABOUT</a>
+                    </li>
+                    <li>
+                        <a href="/bookstore.html">BOOKSTORE</a>
+                    </li>
+                    <li>
+                        <a href="/contact.html">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- navbar -->
+
+<div>
+    <div>
+        <h1 class="section-title">New Releases</h1>
+    </div>
+    <div>
+        <hr>
+    </div>
+</div>
+<!-- new releases title -->
+
+<div class="carousel-container">
+    <div class="carousel">
+        <div class="carousel-cell">
+            <div class="thumbnail-wrapper">
+                <div class="thumbnail-carousel-1" style="background-image: url('https://futuretensebooks.com/wp-content/uploads/2023/04/Parker-Young-Cover-Final-copy-400x659.png')"></div>
+                <div class="carousel-image-overlay">
+                    <div class="carousel-image-overlay-text"><p>Cheap Therapist Says <br/>You're Insane<br/> by Parker Young</p></div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-cell">
+            <div class="thumbnail-wrapper">
+                <div class="thumbnail-carousel-2" style="background-image: url('https://futuretensebooks.com/wp-content/uploads/2022/10/FOREIGN-BODY-FRONT-COVER10.22.22-400x571.jpeg')"></div>
+                <div class="carousel-image-overlay">
+                    <div class="carousel-image-overlay-text"><p>Foreign Body <br/>by Katie Gene Friedman</div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-cell">
+            <div class="thumbnail-wrapper">
+                <div class="thumbnail-carousel-3" style="background-image: url('https://futuretensebooks.com/wp-content/uploads/2022/04/AuraCover-1-400x599.jpeg')"></div>
+                <div class="carousel-image-overlay">
+                    <div class="carousel-image-overlay-text"><p>Aura <br/>by Hillary Leftwich</p></div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-cell">
+            <div class="thumbnail-wrapper">
+                <div class="thumbnail-carousel-4" style="background-image: url('https://futuretensebooks.com/wp-content/uploads/2019/02/IMG_1583-768x1126.jpg')"></div>
+                <div class="carousel-image-overlay">
+                    <div class="carousel-image-overlay-text"><p>Liar <br />by Rob Roberge</p></div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-cell">
+            <div class="thumbnail-wrapper">
+                <div class="thumbnail-carousel-5" style="background-image: url('https://futuretensebooks.com/wp-content/uploads/2019/01/Boyfriends_Cover-768x1152.jpg')"></div>
+                <div class="carousel-image-overlay">
+                    <div class="carousel-image-overlay-text"><p>Boyfriends <br/>by Tara Atkinson</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!--- new releases carousel --->
+
+<div>
+    <div>
+        <h1 class="section-title">Catalog</h1>
+    </div>
+    <div>
+        <hr>
+    </div>
+</div>
+<!-- catalog title -->
+
+<ul class="product-list">
+    <li class="product-item">
+        <a href="https://futuretensebooks.com/product/parker-young/">
+            <div class="thumbnail-wrapper">
+                <div class="thumbnail-image-1" style="background-image: url('https://futuretensebooks.com/wp-content/uploads/2023/04/Parker-Young-Cover-Final-copy-400x659.png')"></div>
+            </div>
+            <h2>Cheap Therapist Says You’re Insane by Parker Young</h2>
+            <span class="price">$15.00</span>
+        </a>
+    </li>
+    <li class="product-item">
+        <a href="https://futuretensebooks.com/product/foreign-body/">
+            <div class="thumbnail-wrapper">
+                <div class="thumbnail-image-2" style="background-image: url('https://futuretensebooks.com/wp-content/uploads/2022/10/FOREIGN-BODY-FRONT-COVER10.22.22-400x571.jpeg')"></div>
+            </div>
+            <h2>Foreign Body by Katie Gene Friedman</h2>
+            <span class="price">$15.00</span>
+        </a>
+    </li>
+    <li class="product-item">
+        <a href="https://futuretensebooks.com/product/aura/">
+            <div class="thumbnail-wrapper">
+                <div class="thumbnail-image-3" style="background-image: url('https://futuretensebooks.com/wp-content/uploads/2022/04/AuraCover-1-400x599.jpeg')"></div>
+            </div>
+            <h2>Aura by Hillary Leftwich</h2>
+            <span class="price">$15.00</span>
+        </a>
+    </li>
+    <li class="product-item">
+        <a href="https://futuretensebooks.com/product/small-moods/">
+            <div class="thumbnail-wrapper">
+                <div class="thumbnail-image-4" style="background-image: url('https://futuretensebooks.com/wp-content/uploads/2021/11/Small_Moods_Final_Cover-400x617.jpg')"></div>
+            </div>
+            <h2>Small Moods by Shane Kowalski</h2>
+            <span class="price">$15.00</span>
+        </a>
+    </li>
+    <li class="product-item">
+        <a href="https://futuretensebooks.com/product/runaways-hardcover/" >
+            <div class="thumbnail-wrapper" class="thumbnail-wrapper">
+                <div class="thumbnail-image-5" style="background-image: url('https://futuretensebooks.com/wp-content/uploads/2021/07/RunawaysCoverFinal-400x560.jpg')"></div>
+            </div>
+            <h2>Runaway by Michael J Seidlinger</h2>
+            <span class="price">$15.00</span>
+        </a>
+    </li>
+    <li class="product-item">
+        <a href="https://futuretensebooks.com/product/prado/">
+            <div class="thumbnail-wrapper" class="thumbnail-wrapper">
+                <div class="thumbnail-image-6" style="background-image: url('https://futuretensebooks.com/wp-content/uploads/2021/04/FFF_4-400x600.png')"></div>
+            </div>
+            <h2>Essays by Emilly Prado</h2>
+            <span class="price">$15.00</span>
+        </a>
+    </li>
+</ul>
+<!-- catalog -->
+
+<script src="https://cdn.jsdelivr.net/npm/flickity@2.2.2/dist/flickity.pkgd.min.js?v=1"></script>
+<script>
+    window.onload = function() {
+        var flkty = new Flickity('.carousel', {
+            initialIndex: 1
+        });
+    };
+</script>
 </body>
 </html>
