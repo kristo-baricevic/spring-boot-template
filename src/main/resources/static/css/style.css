@@ -1,0 +1,323 @@
+body {
+        background-color: #7BDFFF;
+    }
+    .section-title {
+        font-family: Oswald;
+        color: black;
+        font-size: 36px;
+    }
+
+    /* Custom styles for the carousel */
+    .carousel-container {
+        padding: 20px;
+        background-color: #7BDFFF;
+    }
+    .carousel {
+        height: 220px;
+    }
+
+    .carousel-cell {
+        position: relative;
+        width: 33.33%;
+        height: 220px; /* Set the height of each carousel cell */
+        margin-right: 10px; /* Set the spacing between carousel cells */
+        background-color: rgba(225, 220, 210, 0.00);
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .carousel-cell .thumbnail-wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.5);
+        text-align: center;
+        line-height: 150px;
+        font-size: 24px;
+    }
+    .carousel-cell .thumbnail-carousel-1 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background-position: left 20% bottom;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 2px 4px rgba(0, 1, 1, 0.4);
+        transform: translate(-50%, -50%);
+        transition: opacity 0.3s ease-in-out;
+    }
+    .carousel-cell .carousel-image-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.7);
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: opacity 0.3s ease-in-out;
+    }
+    .carousel-cell:hover .carousel-image-overlay {
+        opacity: 1;
+    }
+    .carousel-cell:hover .thumbnail-carousel {
+        opacity: 0.8;
+    }
+    .carousel-cell .carousel-image-overlay-text {
+            line-height: 15px;
+
+        color: white;
+        font-size: 14px;
+    }
+    .carousel-cell .thumbnail-carousel-2 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background-size: cover;
+        background-position: center bottom;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 2px 4px rgba(0, 1, 1, 0.4);
+    }
+    .carousel-cell .thumbnail-carousel-3 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background-size: cover;
+        background-position: center bottom 30%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 2px 4px rgba(0, 1, 1, 0.4);
+    }
+
+    .carousel-cell .thumbnail-carousel-4 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background-size: cover;
+        background-position: center top 30%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 2px 4px rgba(0, 1, 1, 0.4);
+    }
+
+    .carousel-cell .thumbnail-carousel-5 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background-size: cover;
+        background-position: center bottom 30%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 2px 4px rgba(0, 1, 1, 0.4);
+    }
+
+    /* Nav Bar */
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    ul li {
+        margin-right: 10px;
+    }
+    ul li a {
+        color: #fff;
+        text-decoration: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+     ul li a:hover {
+        background-color: rgba(225, 220, 210, 0.5);
+    }
+    .logo{
+        height: 40px;
+    }
+
+    /* Product List */
+    .product-list {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .product-item {
+        flex: 0 0 calc(33.33% - 20px);
+        background-color: rgba(225, 220, 210, 0.5);
+        padding: 20px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+    }
+    .product-item:hover {
+        background-color: white;
+    }
+    .product-item a:hover {
+        background-color: white;
+    }
+    .product-item:last-child {
+        margin-right: 0;
+    }
+    .product-item a {
+        display: block;
+        text-decoration: none;
+        color: #333;
+    }
+
+    .product-item .thumbnail-wrapper {
+        width: 100%;
+        height: 0;
+        padding-bottom: 100%; /* Maintain a square aspect ratio */
+        justify-content: space-between;
+        position: relative;
+        overflow: hidden;
+    }
+    .product-item .thumbnail-image-1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center top;
+        border-radius: 10px;
+        transform: translate(-50%, -50%);
+    }
+    .product-item .thumbnail-image-2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center top 20%;
+        border-radius: 10px;
+        transform: translate(-50%, -50%);
+    }
+    .product-item .thumbnail-image-3 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center bottom 30%;
+        border-radius: 10px;
+        transform: translate(-50%, -50%);
+    }
+    .product-item .thumbnail-image-4 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        transform: translate(-50%, -50%);
+    }
+    .product-item .thumbnail-image-5 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center bottom 55%;
+        border-radius: 10px;
+        transform: translate(-50%, -50%);
+    }
+    .product-item .thumbnail-image-6 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center top 60%;
+        border-radius: 10px;
+        transform: translate(-50%, -50%);
+    }
+    .product-item h2 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .product-item .price {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    /* band pics section */
+
+    .band-pics-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+.photo-wrapper {
+    border: 2px solid #000;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 600px;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.photo-wrapper.first {
+    background-image: url('/images/ETBS1.jpeg');
+    margin: 10px;
+}
+
+.photo-wrapper.second {
+    background-image: url('/images/ETBS2.jpeg');
+    margin: 10px;
+}
+
+.photo-wrapper.third {
+    background-image: url('/images/ETBS3.jpeg');
+    margin: 10px;
+}
+
+.photo-wrapper.fourth {
+    background-image: url('/images/ETBS4.jpeg');
+    background-position: center bottom;
+    margin: 10px;
+}
