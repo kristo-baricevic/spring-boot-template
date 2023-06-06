@@ -346,22 +346,22 @@ body {
 }
 
 .photo-wrapper.first {
-    background-image: url('/images/ETBS1.jpeg');
+    background-image: url('/static/images/ETBS1.jpeg');
     margin: 10px;
 }
 
 .photo-wrapper.second {
-    background-image: url('/images/ETBS2.jpeg');
+    background-image: url('/static/images/ETBS2.jpeg');
     margin: 10px;
 }
 
 .photo-wrapper.third {
-    background-image: url('/images/ETBS3.jpeg');
+    background-image: url('/static/images/ETBS3.jpeg');
     margin: 10px;
 }
 
 .photo-wrapper.fourth {
-    background-image: url('/images/ETBS4.jpeg');
+    background-image: url('/static/images/ETBS4.jpeg');
     background-position: center bottom;
     margin: 10px;
 }
