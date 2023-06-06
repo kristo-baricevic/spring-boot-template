@@ -2,9 +2,105 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>About</title>
+    <title>The Electric Toothbrush Sisters</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flickity@2.2.2/dist/flickity.min.css" />
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<p>test</p>
+<header>
+    <nav>
+        <div>
+            <div>
+                <ul>
+                    <li>
+                        <a href="/">
+                            <img class="logo" alt="photo" src="images/ETBSLOGO.jpeg" />
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-item" href="/about">ABOUT</a>
+                    </li>
+                    <li>
+                        <a class="nav-item" href="/shows">SHOWS</a>
+                    </li>
+                    <li>
+                        <a class="nav-item" href="/contact">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<h3>The Story of</h3>
+<h1>the Electric Toothbrush Sisters</h1>
+<div class="about-text">
+    <div id="animated-text">
+        <div class="sentence">
+            <span>A virus came...</span>
+        </div>
+        <div class="sentence">
+            <span>and all the schools closed.</span>
+        </div>
+        <div class="sentence">
+            <span>Suddenly, parents were teachers</span>
+        </div>
+        <div class="sentence">
+            <span>and home-schooling commenced.</span>
+        </div>
+        <div class="sentence">
+            <span>Math remained important,</span>
+        </div>
+        <div class="sentence">
+            <span>as well as reading and writing -</span>
+        </div>
+        <div class="sentence">
+            <span>but music class became crucial.</span>
+        </div>
+        <div class="sentence">
+            <span>A papa decided now was the time</span>
+        </div>
+        <div class="sentence">
+            <span>to dust off the rickety piano</span>
+        </div>
+        <div class="sentence">
+            <span>and learn how to strike the keys.</span>
+        </div>
+        <div class="sentence">
+            <span>A Nina had many ideas to rattle out in melody.</span>
+        </div>
+        <div class="sentence">
+            <span>In times of crisis</span>
+        </div>
+        <div class="sentence">
+            <span>there must be joy.</span>
+        </div>
+        <div class="sentence">
+            <div class="about-wrapper">
+                <img src="images/ETBS1.jpeg" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+const sentences = document.querySelectorAll('.sentence');
+
+function showSentences() {
+  let delay = 0;
+  for (let i = 0; i < sentences.length; i++) {
+    const sentence = sentences[i];
+    sentence.style.animationDelay = `${delay}s`;
+    delay += 2;
+  }
+}
+
+showSentences();
+
+</script>
+
 </body>
 </html>
