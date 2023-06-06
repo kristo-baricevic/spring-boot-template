@@ -439,9 +439,11 @@ h1, h2, h3 {
 
 /* CONTACT */
 
-.contact {
+.contact-wrapper {
     padding: 50px;
     text-align: center;
+    width: 75%;
+    height: auto;
     font-size: 20px;
     display: flex;
     flex-direction: column;
@@ -450,12 +452,11 @@ h1, h2, h3 {
 }
 
 .animated-name {
-  width: 100%;
-  height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 100px
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 75px
 }
 
 .contact-card {
