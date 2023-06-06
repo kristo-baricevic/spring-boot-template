@@ -15,6 +15,37 @@ body {
     .carousel {
         height: 220px;
     }
+    .carousel-container-2 {
+        padding: 20px;
+        background-color: #7BDFFF;
+    }
+    .carousel-2 {
+        height: 620px;
+    }
+    .carousel-cell-2 {
+            position: relative;
+            width: 620px;
+            height: 620px; /* Set the height of each carousel cell */
+            margin-right: 10px; /* Set the spacing between carousel cells */
+            background-color: rgba(225, 220, 210, 0.00);
+            display: inline-block;
+            vertical-align: top;
+            text-align: center;
+            font-size: 24px;
+        }
+        .carousel-cell .thumbnail-wrapper-2 {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 600px;
+                height: 600px;
+                border-radius: 50%;
+                background-color: rgba(255, 255, 255, 0.5);
+                text-align: center;
+                line-height: 150px;
+                font-size: 24px;
+            }
 
     .carousel-cell {
         position: relative;
@@ -138,12 +169,14 @@ body {
 
     /* Nav Bar */
     header {
-        background-color: #333;
-        color: #fff;
+        background-color: #4682B4;
+        color: white;
         padding: 10px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        font-family: 'Lato', sans-serif;
+        box-shadow: 0 2px 4px rgba(0, 1, 1, 0.4);
     }
     ul {
         list-style-type: none;
@@ -157,16 +190,19 @@ body {
         margin-right: 10px;
     }
     ul li a {
+        display: inline-block;
         color: #fff;
         text-decoration: none;
         padding: 5px 10px;
-        border-radius: 5px;
     }
      ul li a:hover {
-        background-color: rgba(225, 220, 210, 0.5);
+        background-color: pink;
+        color: black;
+        box-shadow: 0 2px 4px rgba(0, 1, 1, 0.4);
     }
     .logo{
-        height: 40px;
+        height: 400px;
+        box-shadow: 0 2px 4px rgba(0, 1, 1, 0.4);
     }
 
     /* Product List */
@@ -179,16 +215,16 @@ body {
     }
     .product-item {
         flex: 0 0 calc(33.33% - 20px);
-        background-color: rgba(225, 220, 210, 0.5);
+        background-color: rgba(250, 250, 250, 0.7);
         padding: 20px;
         margin-bottom: 20px;
         box-sizing: border-box;
     }
     .product-item:hover {
-        background-color: white;
+        background-color: #96DED1;
     }
     .product-item a:hover {
-        background-color: white;
+        background-color: #96DED1;
     }
     .product-item:last-child {
         margin-right: 0;

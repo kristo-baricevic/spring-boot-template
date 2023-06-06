@@ -5,6 +5,9 @@
     <title>The Electric Toothbrush Sisters</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flickity@2.2.2/dist/flickity.min.css" />
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -16,22 +19,17 @@
                 <ul>
                     <li>
                         <a href="/">
-                            <img class="logo" alt="photo" src="images/FTLogo.jpeg" />
+                            <img class="logo" alt="photo" src="images/ETBSLOGO.jpeg" />
                         </a>
                     </li>
                     <li>
-                        <a href="/">
-                            <img class="logo" src="images/FTB-Header-Name.jpeg" />
-                        </a>
+                        <a style="font-size: 40px;" href="/about.html">ABOUT</a>
                     </li>
                     <li>
-                        <a href="/about.html">ABOUT</a>
+                        <a style="font-size: 40px;" href="/shows.html">SHOWS</a>
                     </li>
                     <li>
-                        <a href="/bookstore.html">BOOKSTORE</a>
-                    </li>
-                    <li>
-                        <a href="/contact.html">CONTACT</a>
+                        <a style="font-size: 40px;" href="/contact.html">CONTACT</a>
                     </li>
                 </ul>
             </div>
@@ -93,7 +91,6 @@
             </div>
         </div>
     </div>
-</div>
 </div>
 <!--- new releases carousel --->
 
@@ -202,21 +199,44 @@
 </div>
 <!-- band photos title -->
 
-    <div class="band-pics-section">
-        <div class="photo-wrapper first"></div>
-        <div class="photo-wrapper second"></div>
-        <div class="photo-wrapper third"></div>
-        <div class="photo-wrapper fourth"></div>
+<div class="carousel-container-2">
+    <div class="carousel-2">
+        <div class="carousel-cell-2">
+            <div class="thumbnail-wrapper-2">
+                <div class="photo-wrapper first"></div>
+            </div>
+        </div>
+        <div class="carousel-cell-2">
+            <div class="thumbnail-wrapper-2">
+                <div class="photo-wrapper second"></div>
+            </div>
+        </div>
+        <div class="carousel-cell-2">
+            <div class="thumbnail-wrapper-2">
+                <div class="photo-wrapper third"></div>
+            </div>
+        </div>
+        <div class="carousel-cell-2">
+            <div class="thumbnail-wrapper-2">
+                <div class="photo-wrapper fourth"></div>
+            </div>
+        </div>
     </div>
+</div>
 <!-- band pics -->
+
 
 <script src="https://cdn.jsdelivr.net/npm/flickity@2.2.2/dist/flickity.pkgd.min.js?v=1"></script>
 <script>
-    window.onload = function() {
-        var flkty = new Flickity('.carousel', {
-            initialIndex: 1
-        });
-    };
+   window.onload = function() {
+    var flkty1 = new Flickity('.carousel', {
+        initialIndex: 1
+    });
+    var flkty2 = new Flickity('.carousel-2', {
+        initialIndex: 1
+    });
+};
+
 </script>
 </body>
 </html>
