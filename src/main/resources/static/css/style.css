@@ -222,9 +222,13 @@ body {
     }
     .product-item:hover {
         background-color: #96DED1;
+            box-shadow: none;
+
     }
     .product-item a:hover {
         background-color: #96DED1;
+            box-shadow: none;
+
     }
     .product-item:last-child {
         margin-right: 0;
