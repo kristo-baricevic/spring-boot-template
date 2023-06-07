@@ -11,6 +11,7 @@ body {
 
     .section-title-background {
         position: relative;
+        padding: 3px;
         width: 100%;
     }
 
@@ -20,7 +21,7 @@ body {
   top: 50%;
   left: 0;
   right: 0;
-  height: 40px;
+  height: 90%;
   background-color: #93E9BE;
   transform: translateY(-50%);
   z-index: -1;
@@ -75,10 +76,9 @@ body {
             text-align: center;
             align-items: center;
             width: 30%;
-    }
+ }
 
     .section-title-about-2 {
-
                 font-family: Oswald;
                 color: black;
                 font-weight: bold;
