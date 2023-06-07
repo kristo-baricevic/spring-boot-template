@@ -39,16 +39,19 @@
     </nav>
 </header>
 <div class="contact-wrapper">
-    <div class="animated-name">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200">
-            <path id="path" d="M50 150 C 150 50, 350 50, 450 150" fill="transparent" stroke="#000" stroke-width="2" />
-            <text font-family="Cedarville Cursive, cursive" font-size="36" fill="#000">
-                <textPath xlink:href="#path" startOffset="0">
-                    <animate attributeName="startOffset" from="-100%" to="0%" dur="2s" fill="" />
-                    Electric Toothbrush Sisters
-                </textPath>
-            </text>
-        </svg>
+    <div class="animated-name-wrapper">
+        <div class="animated-name">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 200">
+                <path id="path" d="M50 150 C 150 50, 350 50, 450 150" fill="transparent" stroke="none" />
+                <text font-family="Cedarville Cursive, cursive" font-size="36" fill="#000">
+                    <textPath id="textPath" xlink:href="#path" startOffset="0">
+                        <animate attributeName="startOffset" from="-100%" to="0%" dur="4s" repeatCount="indefinite" keyTimes="0;0.5;1" values="-100%;0%;0%" />
+                        Electric Toothbrush Sisters
+                    </textPath>
+                </text>
+            </svg>
+
+        </div>
     </div>
     <div class="contact-card">
         <p>contact us!</p>
@@ -56,32 +59,5 @@
     </div>
 </div>
 
-<script>
-// Animate the text along the path gradually
-const textPath = document.getElementById('path');
-const textLength = textPath.getComputedTextLength();
-textPath.style.strokeDasharray = textLength;
-textPath.style.strokeDashoffset = textLength;
-
-function animateText() {
-    textPath.style.animation = 'draw 5s linear forwards';
-}
-
-// Trigger the animation when the page is loaded
-window.addEventListener('load', animateText);
-</script>
-
-<style>
-
-<style>
-@keyframes draw {
-    0% {
-        stroke-dashoffset: 2 * textLength;
-    }
-    100% {
-        stroke-dashoffset: 0;
-    }
-}
-</style>
 </body>
 </html>

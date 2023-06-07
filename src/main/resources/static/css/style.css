@@ -1,6 +1,14 @@
 body {
         background-color: #7BDFFF;
-    }
+        text-align: center;
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+}
+
     .section-title {
         font-family: Oswald;
         color: black;
@@ -81,7 +89,6 @@ body {
         top: 50%;
         left: 50%;
         background-position: left 20% bottom;
-        transform: translate(-50%, -50%);
         box-shadow: 0 2px 4px rgba(0, 1, 1, 0.4);
         transform: translate(-50%, -50%);
         transition: opacity 0.3s ease-in-out;
@@ -170,6 +177,7 @@ body {
     /* Nav Bar */
     header {
         background-color: #4682B4;
+        width: 100%;
         color: white;
         padding: 10px;
         display: flex;
@@ -391,7 +399,7 @@ body {
 }
 
 .about-text {
-    padding: 50px;
+    padding: 20px;
     text-align: center;
     font-size: 20px;
     display: flex;
@@ -421,28 +429,12 @@ h1, h2, h3 {
   }
 }
 
-@media (max-width: 1025px) {
-    .section-title {
-        font-size: 2.5vw;
-    }
-
-    header ul li a {
-        font-size: 1.2vw;
-    }
-
-    .logo {
-        height: 15vw;
-        width: auto;
-        max-width: 100%;
-    }
-}
-
 /* CONTACT */
 
 .contact-wrapper {
     padding: 50px;
     text-align: center;
-    width: 75%;
+    width: 100%;
     height: auto;
     font-size: 20px;
     display: flex;
@@ -451,12 +443,27 @@ h1, h2, h3 {
     align-items: center;
 }
 
-.animated-name {
-    width: 100%;
+.animated-name-wrapper {
     display: flex;
+    width: 100%;
+    height: 100%;
     justify-content: center;
     align-items: center;
-    margin-left: 75px
+    text-align: center;
+}
+
+.animated-name {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: auto%;
+    width: 100%;
+    align-items: center;
+}
+
+.animated-name svg {
+    width: 70%;
+    height: auto;
 }
 
 .contact-card {
@@ -480,6 +487,33 @@ h1, h2, h3 {
 .contact-card p:last-child {
   color: #666;
 }
+
+@keyframes draw {
+    0% {
+        stroke-dashoffset: 2 * textLength;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@media (max-width: 1025px) {
+    .section-title {
+        font-size: 2.5vw;
+    }
+
+    header ul li a {
+        font-size: 1.2vw;
+    }
+
+    .logo {
+        height: 15vw;
+        width: auto;
+        max-width: 100%;
+    }
+}
+
+
 
 @media (max-width: 750px) {
 
