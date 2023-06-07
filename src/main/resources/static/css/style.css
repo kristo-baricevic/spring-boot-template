@@ -1,19 +1,93 @@
 body {
         background-color: #7BDFFF;
-        text-align: center;
+        text-align: left;
         width: 100%;
         height: auto;
         display: flex;
         justify-content: center;
         flex-direction: column;
-        align-items: center;
+}
+
+
+    .section-title-background {
+        position: relative;
+        width: 100%;
+    }
+
+.section-title-background::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background-color: #93E9BE;
+  transform: translateY(-50%);
+  z-index: -1;
+  box-shadow: 0 2px 4px rgba(0, 1, 1, 0.4);
 }
 
     .section-title {
         font-family: Oswald;
         color: black;
-        font-size: 36px;
+        font-weight: bold;
+        display: flex;
+        justify-content: left;
+        text-align: left;
+        align-items: left;
+        margin-left: 40px;
     }
+
+    .section-title p {
+            font-size: 36px;
+    }
+
+    .section-title-new-releases {
+    }
+
+    .section-title-new-releases p {
+            font-size: 36px;
+
+    }
+
+    .section-title-catalog {
+    }
+
+    .section-title-catalog p {
+            font-size: 36px;
+
+    }
+
+    .section-title-band-photos {
+    }
+
+    .section-title-band-photos p {
+            font-size: 36px;
+    }
+
+    .section-title-about-1 {
+
+            font-family: Oswald;
+            color: black;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            width: 30%;
+    }
+
+    .section-title-about-2 {
+
+                font-family: Oswald;
+                color: black;
+                font-weight: bold;
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+                width: 50%;
+        }
 
     /* carousels */
 
@@ -383,6 +457,15 @@ body {
 
 /* ABOUT PAGE */
 
+.about-title {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
 .about-wrapper {
     display: flex;
     justify-content: center;
@@ -414,9 +497,7 @@ body {
     align-items: center;
 }
 
-h1, h2, h3 {
-    text-align: center;
-}
+
 
 .sentence {
     text-align: center;
