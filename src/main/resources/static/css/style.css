@@ -11,7 +11,7 @@ body {
 
     .section-title-background {
         position: relative;
-        padding: 3px;
+        padding: 5px;
         width: 100%;
     }
 
@@ -21,7 +21,7 @@ body {
   top: 50%;
   left: 0;
   right: 0;
-  height: 90%;
+  height: 70%;
   background-color: #93E9BE;
   transform: translateY(-50%);
   z-index: -1;
@@ -520,7 +520,6 @@ body {
 /* CONTACT */
 
 .contact-wrapper {
-    padding: 50px;
     text-align: center;
     width: 100%;
     height: auto;
@@ -607,6 +606,7 @@ body {
     .nav-item {
         font-size: 24px;
     }
+
 
     .carousel {
         height: 150px;
