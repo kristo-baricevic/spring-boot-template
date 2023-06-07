@@ -15,17 +15,24 @@ body {
         font-size: 36px;
     }
 
-    /* Custom styles for the carousel */
+    /* carousels */
+
     .carousel-container {
         padding: 20px;
+        width: 100%;
         background-color: #7BDFFF;
+            display: block;
+
     }
     .carousel {
         height: 220px;
     }
     .carousel-container-2 {
         padding: 20px;
+        width: 100%;
         background-color: #7BDFFF;
+            display: block;
+
     }
     .carousel-2 {
         height: 620px;
@@ -33,8 +40,8 @@ body {
     .carousel-cell-2 {
             position: relative;
             width: 620px;
-            height: 620px; /* Set the height of each carousel cell */
-            margin-right: 10px; /* Set the spacing between carousel cells */
+            height: 620px;
+            margin-right: 10px;
             background-color: rgba(225, 220, 210, 0.00);
             display: inline-block;
             vertical-align: top;
@@ -57,9 +64,9 @@ body {
 
     .carousel-cell {
         position: relative;
-        width: 33.33%;
-        height: 220px; /* Set the height of each carousel cell */
-        margin-right: 10px; /* Set the spacing between carousel cells */
+        width: 220px;
+        height: 220px;
+        margin-right: 10px;
         background-color: rgba(225, 220, 210, 0.00);
         display: inline-block;
         vertical-align: top;
@@ -88,9 +95,9 @@ body {
         position: absolute;
         top: 50%;
         left: 50%;
+        transform: translate(-50%, -50%);
         background-position: left 20% bottom;
         box-shadow: 0 2px 4px rgba(0, 1, 1, 0.4);
-        transform: translate(-50%, -50%);
         transition: opacity 0.3s ease-in-out;
     }
     .carousel-cell .carousel-image-overlay {
@@ -114,8 +121,7 @@ body {
         opacity: 0.8;
     }
     .carousel-cell .carousel-image-overlay-text {
-            line-height: 15px;
-
+        line-height: 15px;
         color: white;
         font-size: 14px;
     }
@@ -186,6 +192,7 @@ body {
         font-family: 'Lato', sans-serif;
         box-shadow: 0 2px 4px rgba(0, 1, 1, 0.4);
     }
+
     ul {
         list-style-type: none;
         padding: 0;
