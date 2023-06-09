@@ -642,6 +642,9 @@ body {
 
 
 @media (max-width: 750px) {
+.product-item {
+        flex-basis: 100%;
+    }
     .nav-item {
         font-size: 24px;
     }
@@ -706,9 +709,7 @@ body {
         height: 80px;
         width: 80px;
     }
-    .product-item {
-        flex-basis: 100%;
-    }
+
 }
 
 
