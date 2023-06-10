@@ -107,19 +107,19 @@ body {
         display: block;
     }
     .carousel-2 {
-        height: 620px;
+       height: 620px;
     }
     .carousel-cell-2 {
-            position: relative;
-            width: 620px;
-            height: 620px;
-            margin-right: 10px;
-            background-color: rgba(225, 220, 210, 0.00);
-            display: inline-block;
-            vertical-align: top;
-            text-align: center;
-            font-size: 24px;
-        }
+       position: relative;
+       width: 620px;
+       height: 620px;
+       margin-right: 10px;
+       background-color: rgba(225, 220, 210, 0.00);
+       display: inline-block;
+       vertical-align: top;
+       text-align: center;
+       font-size: 24px;
+    }
         .carousel-cell .thumbnail-wrapper-2 {
                 position: absolute;
                 top: 50%;

@@ -263,7 +263,6 @@ document.addEventListener("DOMContentLoaded", function() {
             lazyImageObserver.observe(lazyImage);
         });
     } else {
-        // Fall back to event listener
         var active = false;
 
         const lazyLoad = function() {
@@ -295,46 +294,39 @@ document.addEventListener("DOMContentLoaded", function() {
         window.addEventListener('resize', lazyLoad);
         window.addEventListener('orientationchange', lazyLoad);
     }
-});
 
-
-   window.onload = function() {
     var flkty1 = new Flickity('.carousel', {
         initialIndex: 2
     });
     var flkty2 = new Flickity('.carousel-2', {
         initialIndex: 2
     });
-    };
+});
 
-    var modal = document.getElementById("myModal");
-    var modalImg = document.getElementById("img01");
-    var captionText = document.getElementById("caption");
+var modal = document.getElementById("myModal");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
 
-    // Get all images in the second carousel
-    var images = document.querySelectorAll(".carousel-2 .thumbnail-wrapper-2 div");
+var images = document.querySelectorAll(".carousel-2 .thumbnail-wrapper-2 div");
 
-    // Add click event listener to each image
-    images.forEach(function(img) {
+images.forEach(function(img) {
 
     img.onclick = function(){
-    modal.style.display = "block";
-    // Extract the URL from the backgroundImage property and set it as the src of the modalImg
-    modalImg.src = this.style.backgroundImage.slice(5, -2);
-    captionText.innerHTML = this.alt;
-}
+        modal.style.display = "block";
+        modalImg.src = this.style.backgroundImage.slice(5, -2);
+        captionText.innerHTML = this.alt;
+    }
 
-    });
+});
 
-// Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks on <span> (x), close the modal
 span.onclick = function() {
-  modal.style.display = "none";
+    modal.style.display = "none";
 }
 
 </script>
+
 
 </body>
 </html>
